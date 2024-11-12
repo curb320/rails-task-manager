@@ -1,0 +1,11 @@
+<h1>ASKS</h1>
+
+<ul>
+
+<% @tasks.each do |task| %>
+ <li><%= link_to task.title, task_path(task) %>
+ <%# <link_to task.remove, task_path(task)> %>
+ <img src="bin.svg"></li>
+<% end %>
+</ul>
+<h3><%= link_to "add a task", new_path %></h3>
